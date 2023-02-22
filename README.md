@@ -12,7 +12,7 @@ Building realistic projects to improve my front-end skills.
 
 ### Links
 
-- Live Site URL: [Interactive pricing component](https://article-prev1ew-component.netlify.app/)
+- Live Site URL: [Interactive pricing component](https://interactive-pricing-c0mponent.netlify.app/)
 
 ## Built with
 
