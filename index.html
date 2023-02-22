@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Interactive pricing component</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script src="main.js" defer></script>
+  </head>
+  <body class="grid place-content-center text-center">
+    <header class="mt-5 py-12">
+      <h1 class="text-xl text-desaturated-blue-600 font-extrabold mb-3">
+        Simple, traffic-based pricing
+      </h1>
+      <div class="flex flex-col lg:flex-row gap-1 justify-center">
+        <p>Sign-up for our 30-day trial.</p>
+        <p>No credit card required.</p>
+      </div>
+    </header>
+    <main>
+      <article class="bg-white rounded-xl mt-3 mb-12 py-8 drop-shadow-md">
+        <section class="grid gap-8 px-8">
+          <div
+            class="flex flex-col gap-4 lg:flex-row justify-between items-center"
+          >
+            <p class="uppercase tracking-widest">
+              <span class="pageview">100k</span> Pageviews
+            </p>
+            <div class="hidden lg:flex gap-2 justify-center items-center">
+              <h1 class="text-4xl text-desaturated-blue-600 font-extrabold">
+                $<span class="cost">16</span>.00
+              </h1>
+              <p>/&nbsp;month</p>
+            </div>
+          </div>
+
+          <input type="range" id="price-slider" min="0" max="4" value="2" />
+
+          <div class="flex gap-2 justify-center items-center lg:hidden">
+            <h1 class="text-4xl text-desaturated-blue-600 font-extrabold">
+              $<span class="cost2">16</span>.00
+            </h1>
+            <p>/&nbsp;month</p>
+          </div>
+
+          <div class="flex gap-3 px-3 justify-center">
+            <div class="monthly | flex gap-3">
+              <p>Monthly Billing</p>
+              <p
+                class="toggle | bg-grayish-blue-300 px-6 rounded-xl transition duration-300 cursor-pointer hover:bg-cyan-200"
+              ></p>
+            </div>
+            <div class="flex gap-3">
+              <p>Yearly Billing</p>
+              <p class="text-red-300 bg-red-100 rounded-xl px-2 lg:hidden">
+                -25%
+              </p>
+              <p
+                class="hidden lg:block text-red-300 bg-red-100 rounded-xl px-2"
+              >
+                25% discount
+              </p>
+            </div>
+          </div>
+        </section>
+        <hr class="border border-grayish-blue-100 my-8" />
+        <section class="lg:flex justify-between gap-28 px-12">
+          <div class="grid gap-3 justify-items-center lg:justify-items-start">
+            <div class="flex gap-3 items-center">
+              <img class="w-4 h-4" src="images/icon-check.svg" alt="" />
+              <p>Unlimited websites</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img class="w-4 h-4" src="images/icon-check.svg" alt="" />
+              <p>100% data ownership</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img class="w-4 h-4" src="images/icon-check.svg" alt="" />
+              <p>Email reports</p>
+            </div>
+          </div>
+          <button
+            class="text-pale-blue-400 bg-desaturated-blue-600 py-3 px-12 rounded-full mx-auto mt-7 lg:my-auto transition duration-300 hover:text-white"
+          >
+            Start my trial
+          </button>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

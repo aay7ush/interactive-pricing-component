@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-pale-blue-100 text-grayish-blue-400 bg-[url(../images/bg-pattern.svg)] bg-no-repeat text-[15px];
+  }
+
+  header {
+    @apply pb-8 bg-[url(../images/pattern-circles.svg)] bg-no-repeat bg-center;
+  }
+
+  .monthly {
+    @apply relative;
+  }
+
+  .toggle::before {
+    @apply content-[""] w-4 h-4 rounded-3xl absolute left-[74%] top-[3px] bg-white;
+  }
+
+  .active::before {
+    @apply left-[86%];
+  }
+
+  input {
+    @apply appearance-none rounded-md h-2.5 bg-cyan-200;
+    background: linear-gradient(
+      to right,
+      hsl(174, 77%, 80%) 0%,
+      hsl(174, 77%, 80%) 50%,
+      hsl(224, 65%, 95%) 0%,
+      hsl(224, 65%, 95%) 100%
+    );
+  }
+
+  input::-webkit-slider-thumb {
+    @apply appearance-none h-10 w-10 rounded-full bg-cyan-600 transition duration-300 bg-[url(../images/icon-slider.svg)] bg-no-repeat bg-center shadow-custom;
+  }
+
+  input::-webkit-slider-thumb:hover {
+    @apply cursor-pointer bg-cyan-200;
+  }
+}
